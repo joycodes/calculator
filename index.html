@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <link href="./assets/css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="calculator-grid">
-    <div class="output">
-    <div data-previous-operand class="previous-operand"></div>
-    <div data-current-operand class="current-operand"></div>
-    </div>
-    <button data-all-clear class="span-two">AC</button>
-    <button data-delete>DEL</button>
-    <button data-operation>÷</button>
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-operation>*</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-operation>+</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-    <button data-operation>-</button>
-    <button data-number>.</button>
-    <button data-number>0</button>
-    <button data-equals class="span-two">=</button>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <form name="form">
+            <div class="display">
+                <input type="text" placeholder="0" name="displayResult" />
+            </div>
+            <div class="buttons">
+                <div class="row" style="display: flex;">
+                    <input type="button" data-clear style="flex: 1; border-radius: 999px;" value="CE">
+                    <input type="button" data-delete style="flex: 1; border-radius: 999px;" value="C">
+                </div>
+                <div class="row">
+                    <input type="button" name="b7" data-number value="7">
+                    <input type="button" name="b8" data-number value="8" >
+                    <input type="button" name="b9" data-number value="9" >
+                    <input type="button" name="addition" data-operation value="+" >
+                </div>
+
+                <div class="row">
+                    <input type="button" name="b4" data-number value="4" >
+                    <input type="button" name="b5" data-number value="5" >
+                    <input type="button" name="b6" data-number value="6" >
+                    <input type="button" name="subtraction" data-operation value="-" >
+                </div>
+
+                <div class="row">
+                    <input type="button" name="b1" data-number value="1" >
+                    <input type="button" name="b2" data-number value="2" >
+                    <input type="button" name="b3" data-number value="3" >
+                    <input type="button" name="mulb" data-operation value="*" >
+                </div>
+
+                <div class="row">
+                    <input type="button" name="b0" data-number value="0" >
+                    <input type="button" name="potb" data-dot value="." >
+                    <input type="button" name="divb" data-operation value="/" >
+                    <input type="button" class="red" data-equals value="=" >
+                </div>
+            </div>
+
+        </form>
     </div>
     <script src="./assets/js/main.js"></script>
+</body>
 
-  </body>
 </html>
